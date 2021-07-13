@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>ECE 3400 Spring 2021 Wiki by kr397</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>ECE 3400 Wiki</h1>
+        <h2>Spring 2021</h2>
+        <h2><b>Krithik Ranjan</b> kr397</h2>
+        <!--
+        <a href="https://github.coecis.cornell.edu/kr397/ece3400-sp2021" class="button"><small>View project on</small> GitHub</a>
+        -->
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="lab-2-light-following-robot-part-2" class="anchor" href="#lab-2-light-following-robot-part-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>Lab 2</strong> Light Following Robot Part 2</h1>
+
+<h2>
+<a id="objective" class="anchor" href="#objective" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Objective</h2>
+<p>This lab was a continuation from the previous Lab 1, where we had set up our Arduino programming environment, and created a very basic circuit for using and testing light sensors with Arduino Nano Every. In this lab, we first played around with the timing parameters of the microcontroller and its ADC. Then, we created a full-fledged circuit for the robot with an H-Bridge motor driver, calibrated the motors, and put together a complete robot that follows the light when a flashlight is shown on it. Overall, the lab gave us good experience with developing an entire autonomous system using the Arduino Nano Every, from its hardware circuit to its program software.</p>
+
+<h2>
+    <a id="materials-used" class="anchor" href="#materials-used" aria-hidden="true">
+        <span aria-hidden="true" class="octicon octicon-link">
+        </span>
+    </a>
+    Materials Used
+</h2>
+<ul>
+    <li>Arduino Nano Every</li>
+    <li>L293D Motor Driver IC</li>
+    <li>Geared DC Motors</li>
+    <li>Photoresistors</li>
+    <li>Resistors</li>
+    <li>Capacitors</li>
+    <li>Jumpers</li>
+    <li>Breadboard</li>
+</ul>    
+
+<h2>
+<a id="playing-with-the-adc" class="anchor" href="#playing-with-the-adc" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Playing with the ADC</h2>
+<p>The ATmega4809 microcontroller on the Arduino consists of an on-chip Analog-to-Digital Converter (ADC) that reads input voltage signals to provide its numerical value. We used this ADC in the previous lab to obtain the analog readings of the light sensors connected to the Arduino. In this lab, we explored more of how the ADC is timed with reference to the microcontroller to appropriately read the input and provide the output. For this, we referred to the datasheet of ATmega4809 (specifically the ADC chapter 29, and the clock chapter 10), and also wrote some sample code to check the configuration of these elements on the Arduino.</p>
+<p>Every microcontroller has a clock based on which all its operations take place and the input and output signals are generated. This clock can be from an internal or external source -- the Nano Every has an internal oscillator that is by default configured to be 16/20 MHz. This CLK_MAIN is used by the CPU, RAM, and the I/O bus (Section 10.2, ATmega4809 Datasheet). This signal is used to generate CLK_PER, which is the clock used by peripherals (which are synchronized to the main clock) like the ADC. The MCU can be configured to produce CLK_PER of a range of frequencies, decided by a “prescaler” that divides the main clock. We observed this configuration from the MCLKCTRLB register of CLKCTRL (controller for CLK_MAIN), where we found the prescaler to be 2. However, the PEN (Prescaler Enable) bit of this register was 0, which meant that the prescaler was not being used and CLK_PER = CLK_MAIN. Therefore, the clock used by the peripherals on the MCU was 16MHz.</p>
+<p>These peripherals, however, don’t all require to function at the same clock frequency. Most of them have their own clock configuration, which is obtained by another prescaler on CLK_PER. In case of the ADC, we used the CTRLC register of ADC0 to read and update the configuration for ADC_CLK. By default, we found the prescaler to be 128, which meant that ADC_CLK = CLK_PER / 128 = 128 KHz.</p>
+<figure>
+    <center>
+        <img src="images/lab2/image2.png">
+        <figcaption><i>Figure: Serial output of test program to check clock configuration</i></figcaption>
+    </center>
+</figure>
+<p>Once we had determined the default ADC_CLK, we experimented with how we could change it to be faster/slower. This was pretty straightforward, which included just changing the CTRLC register to correspond to the desired prescaler from the datasheet. The frequency of the ADC determines how fast it can sample the input data. Ideally in most cases, we would want the ADC to be as fast as possible. This, however, has drawbacks due to limitation of the hardware. In case of the ATmega4809, the ADC clock needs to be between 50KHz and 1.5MHz for the default 10-bit resolution of the reading. If a lesser resolution is selected (ADC0.CTRLA can be configured for 8-bit resolution), the ADC can function at a faster clock than 1.5MHz. The resolution of the sensor determines how precise the analog reading is; greater the resolution, more precise the values. In order to see this behavior, we tried to change the ADC_CLK prescaler to all possible values, and used it to read the 3.3V output voltage from the Arduino itself (this was done like in Lab 1, by connecting the 3.3V pin to the A0 pin). We obtained the following values on the A0 pins for different ADC_CLK configurations:</p>
+<pre><code>ADC value for DIV256: 723
+ADC value for DIV128: 720
+ADC value for DIV64: 724
+ADC value for DIV32: 723
+ADC value for DIV16: 725
+ADC value for DIV8: 721
+ADC value for DIV4: 1023
+ADC value for DIV2: 1023    
+</code></pre>
+<p>We see that for prescaler values of 8, 16, 32… 256, the value read is about 720, which corresponds to about 3.5V with the ADC reference of 5V.</p>
+<pre><code>Result = ( 1023 * V ) / Vref
+720 = ( 1023 * V ) / 5
+V = ( 5 * 720 ) / 1023 = 3.51     
+</code></pre>
+<p>This is the expected value of the analog read for the 3.3V pin (some variation in the voltage is normal). For the smaller prescalers of 2 and 4, however, the output value is simply 1023, which is the max possible reading in the 10-bit resolution. The prescaler of 2 corresponds to CLK_PER / 2 = 8 MHz, and 4 to CLK_PER / 4 = 4 MHz. Since these are both greater than 1.5 MHz as prescribed by the datasheet for the 10-bit read, the ADC doesn’t operate properly and defaults to output of 1023. If we were to change the CTRLA register for 8-bit operation, however, we would get appropriate readings from DIV2 and DIV4 as well (but not around 720 as the range for 8-bit would be 0-255). the 50KHz lower range of the ADC clock frequency is never reached as the highest prescaler is 256, corresponding to 64KHz.</p>
+
+<h2>
+<a id="using-and-testing-the-h-bridge" class="anchor" href="#using-and-testing-the-h-bridge" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using and Testing the H-Bridge</h2>
+<p>The geared DC motors like the ones we are using in our robots have a very simple operation. They have two pin connections and rotate in one direction when one of the pins is at a higher voltage than the other, and in the other direction when it is the other way round. The speed of the motor is determined by the amount of voltage difference between the two pins, such that the motor will rotate extremely slowly on a very small voltage, and at high speed when higher voltage is applied.</p>
+<p>Given this, we cannot control the motors by directly connecting them to pins on the Arduino and providing voltage. While the I/O pins on the Arduino have a HIGH of 3.3V, they are not rated to provide significant amounts of current which the motors require. If a motor is directly connected to two Arduino pins with one at HIGH and other at LOW, it will most likely blow up the pins. Therefore, the motors are always recommended to be powered by an external source, like batteries. In our robot, we are operating the motors at 4.5V using a series of 3 AA batteries. With this external power, we can now use the Arduino to control motor operation with the help of a circuit called an H-Bridge. The H-Bridge consists of a series of switches or transistors to offer bi-directional control of a motor. In the circuit shown below, when the switches S1 and S4 are closed, one end of the motor M is connected to Vcc and the other to ground and the motor rotates in the clockwise direction. When switches S3 and S2 are closed, the opposite happens, and the motor rotates in the counterclockwise direction.</p>
+<figure>
+    <center>
+        <img src="images/lab2/image1.png" width=50%>
+        <figcaption><i>Figure: H-Bride circuit (from build-electronic-circuits.com)</i></figcaption>
+    </center>
+</figure>
+<p>This circuit and the operation of H-Bridge was discussed in detail in class. For the motor control in our robot for this lab, we used the L293D motor driver IC which consists of two such H-bridges to control two different motors. The pinout of this chip has been shown below, where the left side pins mostly concern one motor, and the right side pins the other. VCC1 is supply voltage for the chip, which it receives from the Arduino’s 5V channel (based on the datasheet). The VCC2 is the power supply for both the motors, at 4.5V from the batteries. The pins IN1 and IN2 are the control input pins for one motor, which is connected to OUT1 and OUT2. The EN1 is the enable pin for this channel which controls whether the motor is receiving any output or not. Similarly, the pins IN3, IN4, OUT3, OUT4, and EN2 are the corresponding pins for the other motor. The functionality of the motor based on these inputs has been described in the table below.</p>
+<figure>
+    <center>
+        <img src="images/lab2/image3.png" width=60%>
+        <figcaption><i>Figure: L293D Pinout (from Lab Handout)</i></figcaption>
+    </center>
+</figure>
+<figure>
+    <center>
+        <img src="images/lab2/l293d-table.png">
+        <figcaption><i>Figure: L293D Motor Control (from Lecture Slides)</i></figcaption>
+    </center>
+</figure>
+<p> As we can see from the table, if for a motor, EN is high, and one IN is low with other being high; the motor turns in a certain direction. Now, in order to control the speed of the motor, we use Pulse-width modulation (PWM), which effectively reduces the power output to the motor by periodically turning it off. On the L293D, this can be done by using a PWM wave on the EN signals. The actual speed is determined by the duty-cycle of the PWM wave, which is essentially the percentage of a cycle that the signal is on high (or “on”). The Arduino Nano Every has some pins defined for PWM purposes, where the user can use <code>analogWrite</code> to send a value between 0-255 for the duty cycle. 
+</p>
+<p>Given these considerations, we created the complete circuit for the robot, on top of the previous circuit with the photoresistors. We connected the motor control pins to digital outputs on the board, with EN pins specifically to those that enable PWM. Both the motors were connected to the outputs of the motor driver. Finally, the ground was common across all the components, like Arduino, batteries, motor driver; VCC1 and VCC2 were connected like explained earlier. This complete circuit has been shown below. In order to protect the circuit, we also had to connect some passive components like resistors and capacitors. Between VCC1 and ground, and VCC2 and ground, we connected polarized 1 uF capacitors as the decoupling capacitors. These protect the circuit from voltage fluctuations due to connection/deconnection and also within the motors. Each of the digital output pins going from the Arduino to the L293D IC has series resistors of 1 KOhm that prevent excess current from going into or being drawn into the Arduino pins.</p>
+<p>For powering the Arduino when it is not connected to the computer through USB, we have a 9V battery on the robot. In order to prevent the wires from the battery from touching different parts of the robot and possibly short circuiting, I plugged the +ve terminal to an empty power rail on the breadboard, and the -ve terminal to the common ground rail as other components. The Vin from the Arduino has a jumper springing out of the breadboard which is left free at the other end. When the Arduino needs to be powered by the battery, that jumper can simply be plugged into the +9V power rail -- like a switch.</p>
+<figure>
+    <center>
+        <img src="images/lab2/Schematic-Nano.svg">
+        <figcaption><i>Figure: Circuit diagram of the robot (Made with TinkerCAD)</i></figcaption>
+    </center>
+</figure>
+<figure>
+    <center>
+        <img src="images/lab2/circuit.jpg">
+        <figcaption><i>Figure: Complete circuit on the breadboard</i></figcaption>
+    </center>
+</figure>
+<p>Once the circuit had been set up, we had to test out the motor control with an Arduino sketch. This code was supposed to first turn both wheels together in the forward direction, then in the backward direction, followed by them turning in the opposite direction, and finally coming to a stop. This was a straightforward code that checked for all of the ways the motors can be turned, thus confirming that the circuit is working properly. Such a simple test also helped check that both the motors were connected appropriately, such that they turned in the same direction when given matching IN signals.</p>
+<p>The code was timed, such that each of these steps took 1 second to complete. I used the <code>millis()</code> function in Arduino to time these steps, and each step was denoted by a state variable. The <code>millis()</code> function returns the time in ms that has passed since the beginning of execution. The logic to check if 1000 ms had passed and update the state was as follows. The <code>nextState</code> variable makes sure that the code for each state is only executed if the state has changed, and not in every iteration.</p>
+<pre><code>if millis() > lastTime + 1000:
+    nextState = currState + 1
+    lastTime = millis()
+</code></pre>
+<p>The sketch resulted in an infinite execution of forward, backward, opposite, stop, a short glimpse of which has been shown below.</p>
+<figure>
+    <center>
+        <img src="images/lab2/lab2_E.gif">
+        <figcaption><i>Figure: Testing H-bridge circuit</i></figcaption>
+    </center>
+</figure>
+
+<h2>
+<a id="motor-calibration" class="anchor" href="#motor-calibration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Motor Calibration</h2>
+<p>Now that the H-bridge circuit was functional and the motors could be controlled, they needed to be calibrated with respect to each other so that they respond to the control signals appropriately. This included finding the exact motor speed (PWM duty cycle), such that both the motors rotate in the same speed in both the directions, thus making the robot go straight. It is important to calibrate the motors to move in sync because the motors we are using in our robots are commercial-grade, and often have imperfections which make them not exactly identical.</p>
+<p>The calibration was a completely trial-based process where I uploaded a sketch to the robot to run both motors in the forward direction for 10s (using the same <code>millis()</code> approach described earlier). In a trial, I observed whether the robot is going exactly straight or not. Since the robot is a 2-wheel drive, if either of the wheels moves faster than the other one, the robot will turn to the side of the slower wheel. So I started off with a certain PWM value for both motors, and over successive iterations the values were adjusted and the process was repeated until the robot started moving straight. As a part of this section in the lab, this process had to be done for slow speed, and medium speed movement. After several trials, appropriate values of speed were found for each motor, which often had to be re-calibrated.</p>
+<figure>
+    <center>
+        <img src="images/lab2/lab2_G.gif">
+        <figcaption><i>Figure: Video of straight slow movement</i></figcaption>
+    </center>
+</figure>
+<figure>
+    <center>
+        <img src="images/lab2/lab2_H.gif">
+        <figcaption><i>Figure: Video of straight movement in medium speed</i></figcaption>
+    </center>
+</figure>
+
+<h2>
+<a id="light-following-robot" class="anchor" href="#light-following-robot" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Light Following Robot</h2>
+<p>After putting together all the hardware and software pieces, the final part of this lab was to develop the culmination of Lab 1 and Lab 2, a light following robot. The requirements of this robot were described in the lab handout as follows.</p>
+<ul>
+    <li>In “normal” conditions (low light or too much light all around), the robot will turn around in place, and the on-board LED on the Arduino will blink with a period of 1s (ON for 500ms and OFF for 500ms).</li>
+    <li>When bright light hits the robot from either side, the robot will rotate to face the light, and then move straight towards it. The LED will be off at this time.</li>
+    <li>If the bright light is removed at any point, the robot will go back to rotating in-place with the on-board LED blinking.</li>
+    <li>If the light is moved to a different position, the robot needs to detect and adapt its movement accordingly to keep going straight towards it.</li>
+</ul>
+<p>Since the movement of the robot is dictated by the light around it, I used two methods of measuring and interpreting the photo-sensor readings for the control of the robot. </p>
+<ul>
+    <li><strong>Normalized measurements:</strong> A method to calculate the measurement of each sensor, relative to the other sensors. This enables simple comparison of the sensor readings to see which side is receiving more light. It is computed as follows. 
+    <pre><code>NMleft = sensorLeft / ( sensorLeft + sensorRight )
+NMright = sensorRight / (sensorRight + sensorLeft ) = 1 - NMleft</code></pre></li>
+    <li><strong>Running average:</strong> Since a normalized measurement only tells which sensor has greater reading, there needs to be a way to determine if the overall light around the robot has significantly increased, on either side. This is required to differentiate the case where there is no light and the robot is rotating in its place, and the case when the robot is facing the light source head-on, both of which will have equivalent normalized measurements. I chose to find the average of sensor readings in order for the robot to determine what the “ambient” light is. In the case of our robot, we can’t calculate the usual mean of the sensor values because they are being constantly read, so  I used the running average of consecutive readings, which can be computed without preemptively knowing all the values. Unlike a normal mean, the running average is weighted more towards the latest values, which also works well for the robot as it will then be primarily calibrated by the most recent sensor values. The running average can be calculated as follows.
+    <pre><code>runningAvg = ( newValue + oldRunningAvg ) / 2</code></pre>
+    </li>
+</ul>
+<p>Based on the requirements given in the lab handout, and these two types of measurements, I divided the logic of the robot’s behavior into 3 states.</p>
+<ul>
+    <li><code>STATE_IDLE</code>: This is the starting state of the robot, where there is either no light, or a lot of light, but no particular light source towards which the robot can move. In this state, the robot will rotate in place and the on-board LED will blink. Since there is no light source at this time, the robot rotates and calibrates its photo-sensor readings using a running average for both right and the left sensors. While updating the running average in every iteration, the robot also compares each of the successive readings with the last running average to determine if a light source has been turned on on either side of the robot. This uses a threshold value such that if the new reading is more than the threshold greater than the last average, a light source is detected and the robot moves to the next state. Since the light has been turned on and it is no longer a normal environment, the robot stops updating the running average when it moves out of the idle state. For the LED blink in this state, the code uses the <code>millis()</code> function to toggle the LED every 500ms, as described in the earlier section. </li>
+    <li><code>STATE_FOUND</code>: This state signifies the stage where the robot has detected the light source, and is rotating towards it to face it. In this state, the robot uses normalized measurements to determine on what side the light has been turned on, in order to rotate in that direction. In every iteration, the normalized measurements of the latest reading are calculated and if either of the NMs are greater than 0.6, the robot is made to rotate in that direction. Eventually, as the robot faces the light source, the readings on both the sensors would become similar, and when they are between 0.4 and 0.6, the robot goes to the next state. During this state, the new readings are also being constantly compared to the last running average for each sensor to detect if the light source gets turned off. If at any point both the sensor readings fall within the threshold range of the last average, the robot goes back to <code>STATE_IDLE</code>. </li>
+    <li><code>STATE_MOVE</code>: This is the final state of the robot where it is facing the light source and begins moving straight towards it. The robot constantly checks new sensor readings and compares the normalization measurements to check if the light has moved, and also compares the last running average to check if the light has been turned off. If either of these hold true, the robot moves back to the appropriate state (<code>STATE_IDLE</code> if light turned off, <code>STATE_FOUND</code> if light moved). </li>
+</ul>
+<p>These states describe the complete movement of the light-following robot, and have been illustrated in the finite-state machine below.</p>
+<figure>
+    <center>
+        <img src="images/lab2/FSM.png">
+        <figcaption><i>Figure: FSM showing the transition of states</i></figcaption>
+    </center>
+</figure>
+<p>In the Arduino sketch for this robot, the logic for these states and for control of the motors has been encapsulated and organized with the help of object-oriented programming. The code consists of two classes, one for a motor, and the other for the complete robot. The motor class consists of members and functions to set up and run a motor in either direction with a certain speed. The robot class consists of two motor objects for each of the motors, along with other members for the operation of the robot, like current state and the running averages. The class has functions to execute each of the robot states and some helpers to move the robot straight, back, and rotate in either direction. There is also a status function that prints a log of the robot operation to the serial monitor for debugging. The values from sensors were read using the <code>analogRead</code> function in each iteration and used in the computation for all of the states.</p>
+<figure>
+    <center>
+        <img src="images/lab2/lab2_I.gif">
+        <figcaption><i>Video: Showing the movement of the final robot</i></figcaption>
+    </center>
+</figure>
+
+<h2>
+<a id="testing-and-problems" class="anchor" href="#testing-and-problems" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Testing and Problems</h2>
+<p>The primary form of testing the robot in all the stages of development was observation. The sketch was uploaded onto the Arduino and the behavior of the robot was verified. In most cases, the serial monitor was also used to display an operation log to check for the expected functionality and debugging on the bench. </p>
+<p>Some of the major problems faced were with the mechanics of the robot. Calibrating the motors to be completely in sync was hard because the motors were very unpredictable -- an appropriate PWM signal chosen for both motors at one time usually didn’t work very well at a later time. This required for the robots to be manually recalibrated every time they were used. Another issue was with the castor wheel on the robot. While a castor is supposed to only provide support to a chassis and move freely in any direction as needed, the castor wheel in my robot kit didn’t have a smooth operation. It repeatedly got stuck in a certain orientation and completely changed the direction of the movement of the robot. A possible fix for both these problems is to use a new robot kit, which I will try for the next lab.   </p>
+
+        </section>
+
+        <aside id="sidebar">
+            <h3>Back to <a href="index.html">Home</a></h3>
+            <h2><a href="#objective">Objective</a></h2>
+            <h2><a href="#materials-used">Materials Used</a></h2>
+            <h2><a href="#playing-with-the-adc">Playing with the ADC</a></h2>
+            <h2><a href="#using-and-testing-the-h-bridge">Using and Testing the H-Bridge</a></h2>
+            <h2><a href="#motor-calibration">Motor Calibration</a></h2>
+            <h2><a href="#light-following-robot">Light Following Robot</a></h2>
+            <h2><a href="#testing-and-problems">Testing and Problems</a></h2>
+  
+            <br>
+            <p class="repo-owner"><a href="https://github.coecis.cornell.edu/kr397/ece3400-sp2021"></a>Maintained by <a href="https://github.coecis.cornell.edu/kr397">kr397</a>.</p>
+  
+            <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
