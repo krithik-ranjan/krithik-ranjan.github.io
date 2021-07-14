@@ -1,67 +1,111 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+<html lang="en">
+    <head>
+ 
+        <title>Krithik Ranjan</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md">
+            <a class="navbar-brand">KR</a>
+            <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main-navigation">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CV</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-    <title>ECE 3400 Spring 2021 Wiki by kr397</title>
-  </head>
+        <header class="page-header header container-fluid">
+            <div class="overlay"></div>
+            <div class="description">
+                <h3>Hello! I am Krithik Ranjan</h3>
+                <p>    
+                    I'm a senior at <b>Cornell University</b> studying <b>Electrical and Computer Engineering</b> with a minor in <b>Design + Environmental Analysis</b>. I am excited about creative learning experiences, assistive technologies, human-centered design and robotics. This page showcases some of the projects I have worked on. 
+                </p>
+            </div>
+        </header>
 
-  <body>
-    <header>
-      <div class="inner">
-        <h1>ECE 3400 Wiki</h1>
-        <h2>Spring 2021</h2>
-        <h2><b>Krithik Ranjan</b> kr397</h2>
-        <!--
-        <a href="https://github.coecis.cornell.edu/kr397/ece3400-sp2021" class="button"><small>View project on</small> GitHub</a>
-        -->
-      </div>
-    </header>
+        
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h2>
-            <a id="lab-1-light-following-robot-part-1" class="anchor" href="#lab-1-light-following-robot-part-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>
-            <strong><a href="lab1.html">Lab 1</a></strong> Light Following Robot Part 1
-          </h2>
-          <h2>
-            <a id="lab-2-light-following-robot-part-2" class="anchor" href="#lab-2-light-following-robot-part-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>
-            <strong><a href="lab2.html">Lab 2</a></strong> Light Following Robot Part 2
-          </h2>
-          <h2>
-            <a id="lab-3-filtering-and-fft" class="anchor" href="#lab-3-filtering-and-fft" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>
-            <strong><a href="lab3.html">Lab 3</a></strong> Filtering and FFT
-          </h2>
-          <h2>
-            <a id="lab-4-ultrasonic-and-all" class="anchor" href="#lab-4-ultrasonic-and-all" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>
-            <strong><a href="lab4.html">Lab 4</a></strong> Ultrasonic Sensors and All
-          </h2>
-          <figure>
-            <img src="images/arduino-nano.jpg" alt="From arduino.cc">
-            <figcaption><i>Image from arduino.cc</i></figcaption>
-          </figure>
-        </section>
-        <aside id="sidebar">
+        <div class="container-fluid features">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-5 col-sm-12">
+                    <a href="https://courses.ece.cornell.edu/ece5990/ECE5725_Spring2021_Projects/May_14/PiDog/Wednesday_kr397_avp34/website/index.html">
+                    <img src="images/pidog.png" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-12">
+                    <h3 class="feature-title"><a href="https://courses.ece.cornell.edu/ece5990/ECE5725_Spring2021_Projects/May_14/PiDog/Wednesday_kr397_avp34/website/index.html">PiDog</a></h3>
+                    <p>PiDog can follow your voice commands, be trained to recognize your hand gestures, and can also be taught new voice commands just like a real dog! This intelligent robot based on Raspberry Pi simulates the training of a pet with the help of speech recognition, computer vision, and machine learning.</p>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-7 col-md-7 col-sm-12">
+                    <h3 class="feature-title"><a href="https://pages.github.coecis.cornell.edu/ece3140-sp2020/avp34-kr397/">Speculative Design Workbook</a></h3>
+                    <p>Series of speculative designs inspired by ideas from articles and research papers like <i>Design Fiction</i> by Julian Bleecker, <i>Prefigurative Intervention</i> by Andrew Boyd, and <i>How Computer Systems Embody Values</i> by Helen Nissenbaum. Compiled as a project for INFO 4240 <i>Designing Tech for Social Impact</i>.</p>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-12">
+                    <a href="https://pages.github.coecis.cornell.edu/ece3140-sp2020/avp34-kr397/">
+                    <img src="images/info4240.png" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-5 col-sm-12">
+                    <a href="https://pages.github.coecis.cornell.edu/ece3140-sp2020/avp34-kr397/">
+                    <img src="images/dea1110.png" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-12">
+                    <h3 class="feature-title"><a href="https://pages.github.coecis.cornell.edu/ece3140-sp2020/avp34-kr397/">Design Portfolio</a></h3>
+                    <p>Final portfolio for DEA 1110 <i>Making a Difference by Design</i> consisting of designs and prototypes of ideas on smart tattoos, healthy robotic environments, and environmental visualizations on an everyday object.</p>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-7 col-md-7 col-sm-12">
+                    <h3 class="feature-title"><a href="https://pages.github.coecis.cornell.edu/ece3140-sp2020/avp34-kr397/">CroK64</a></h3>
+                    <p>An online, multiplayer version of the classic backyard game, Croquet, built using a FRDM-K64 microcontroller board as a gaming controller. Players move their board around like a mallet to hit their ball in different directions, trying to get it through all the wickets before the other player.</p>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-12">
+                    <a href="https://pages.github.coecis.cornell.edu/ece3140-sp2020/avp34-kr397/">
+                    <img src="images/crok64.png" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-5 col-sm-12">
+                    <a href="https://drive.google.com/file/d/1D_l-9hfP2StPMrMoXW8PQqanLsxx_cPA/view?usp=sharing">
+                    <img src="images/test.png" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-12">
+                    <h3 class="feature-title"><a href="https://drive.google.com/file/d/1D_l-9hfP2StPMrMoXW8PQqanLsxx_cPA/view?usp=sharing">Test Board</h3></a>
+                    <p>An original integrated testing platform for the electrical sub-team of CU Autonomous Underwater Vehicle that connects to other boards in the electrical system and monitors the input, output and power signals to check the functionality and safety of the boards.</p>
+                </div>
+            </div>
+            
+        </div>
 
-          <p class="repo-owner"><a href="https://github.coecis.cornell.edu/kr397/ece3400-sp2021"></a>Maintained by <a href="https://github.coecis.cornell.edu/kr397">kr397</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
-    </div>
-
-  
-  </body>
+        
+        
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+    </body>
+    
 </html>

@@ -1,0 +1,97 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #fafafa;
+}
+.navbar {
+    background:#fafafa;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.nav-link,
+.navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    color: #222222;
+    cursor: pointer;
+    font-weight: 600;
+}
+.navbar-brand {
+    color: #009a9a !important;
+    font-weight: 700;
+}
+.nav-link {
+    margin-right: 1em !important;
+}
+.nav-link:hover {
+    color: #009a9a;
+}
+.navbar-brand:hover {
+    color: #222222;
+}
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.header {
+    position: relative;
+}
+
+.description {
+	left: 50%;
+	position: absolute;
+	top: 25%;
+	transform: translate(-50%, 0%);
+	text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    margin-bottom: 10%;
+}
+.description h3 {
+	color: #009a9a;
+	line-height: 1.5;
+    font-weight: 400;
+}
+
+.description p {
+    color: #111111;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.features {
+	margin: 4em auto;
+	padding: 1em;
+    padding-left: 20%;
+    padding-right: 20%;
+	position: relative;
+    color: #444444;
+    font-weight: 300;
+}
+.features h4 {
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 40px;
+    color: #222222;
+}
+
+.feature-title {
+	color: #222222;
+	font-size: 1.3rem;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+.feature-title a{
+    color: #222222;
+    text-decoration: none;
+    
+}
+.feature-title a:hover {
+    color: #009a9a;
+    text-decoration: none;
+}
+
+.features .row {
+	margin-bottom: 40px;
+    vertical-align: middle;
+}
