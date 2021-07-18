@@ -148,4 +148,30 @@ body {
     padding: 4px;
 }
 
+.contact {
+    font-family: "Nunito", sans-serif;
+    color: #444444;
+    text-align: center;
+    font-weight: 300;
+}
 
+.contact a {
+    text-decoration: none;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+}
+  
+.fa:hover {
+    color:#009a9a;
+}
+
+.fa-linkedin {
+    color: #444444;
+}
