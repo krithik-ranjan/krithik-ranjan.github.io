@@ -51,13 +51,13 @@ body {
     line-height: 1.5;
 }
 
-.project-group h3{
+.project-group h3 {
     color: #444444;
     font-family: 'Montserrat', sans-serif;
     text-align: left;
     line-height: 1.5;
     font-weight: 300;
-    padding-left: 10%;
+    padding-left: 5%;
 }
 
 .arrow {
