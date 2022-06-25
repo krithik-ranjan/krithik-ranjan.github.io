@@ -5,8 +5,9 @@ body {
 }
 .navbar {
     background:#fafafa;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-top: 5%;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 .navbar-brand {
     font-family: 'Montserrat', sans-serif;
@@ -14,14 +15,15 @@ body {
     font-weight: 800;
 }
 .nav-link {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
     color: #222222;
-    font-weight: 600;
+    font-weight: 800;
     cursor: pointer;
     margin-right: 1em !important;
 }
 .nav-link:hover {
-    color: #009a9a;
+    color: white;
+    background: linear-gradient(60deg, #43cea2, #185a9d);
 }
 .navbar-collapse {
     justify-content: flex-end;
@@ -39,30 +41,53 @@ body {
 }
 
 .title {
-    font-weight: 400;
-    color: #009a9a;
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.5;
+    background-color: #2e3192;
+    background-image: linear-gradient(60deg, #43cea2 0%, #185a9d 100%);
+    background-size: 100%;
+    background-repeat: repeat;
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    background-clip: text;
+
+    font-size: 64px;
+    font-weight: 800;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    line-height: 1.3;
 }
 
 .subtitle {
-    font-weight: 300;
-    color: #222222;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    color: #444444;
     line-height: 1.5;
 }
 
-.project-group h3 {
+.subtitle a {
     color: #444444;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.subtitle a:hover {
+    text-decoration: none;
+    color: #43cea2;
+}
+
+.project-group h2 {
+    color: #222222;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
     text-align: left;
     line-height: 1.5;
-    font-weight: 300;
+    font-weight: 800;
     padding-left: 5%;
 }
 
 .arrow {
-    border: solid #009a9a;
-    border-width: 0 3px 3px 0;
+    border: solid #43cea2;
+    border-width: 0 5px 5px 0;
     display: inline-block;
     padding: 7px;
     transform: rotate(-45deg);
@@ -100,18 +125,21 @@ body {
 }
 
 .container:hover .overlay {
-    opacity: 0.9;
+    background: linear-gradient(60deg, #43cea2 0%, #185a9d 100%);
+    opacity: 1;
 }
 
 .project-title {
-    color: #009a9a;
+    color: white;
     font-weight: 600;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
     margin-bottom: 5px;
 }
 
 .project-text p {
-    color: #444444;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    color: white;
     text-align: left;
     margin: 0%;
     margin-bottom: 5px;
@@ -119,20 +147,19 @@ body {
 }
 
 .project-text a {
-    color: #222222;
-    font-family: 'Nunito', sans-serif;
+    color: white;
+    font-family: 'IBM Plex Sans', sans-serif;
     text-decoration: none;
     font-weight: 600;
     transition: 0.2s ease;
 }
 
 .project-text a:hover {
-    color: #009a9a;
     text-decoration: none;
 }
 
 .project-text a .arrow-link {
-    border: solid #222222;
+    border: solid white;
     border-width: 0 2px 2px 0;
     display: inline-block;
     padding: 3px;
@@ -143,25 +170,80 @@ body {
 }
 
 .project-text a:hover .arrow-link {
-    border: solid #009a9a;
+    border: solid white;
     border-width: 0 2px 2px 0;
     padding: 4px;
 }
 
+.papers {
+    color: #444444;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.papers h5 {
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    color: #222222;
+}
+.papers p {
+    font-weight: 300;
+}
+.papers b {
+    font-weight: 500;
+}
+.papers a {
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    padding: 5px;
+    font-weight: 800;
+    color: #444444;
+}
+.papers a:hover {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(60deg, #43cea2, #185a9d);
+}
+
 .contact {
-    font-family: "Nunito", sans-serif;
+    font-family: "IBM Plex Sans", sans-serif;
     color: #444444;
     text-align: center;
     font-weight: 300;
 }
 
 .contact a {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     text-decoration: none;
-    font-weight: 700;
-    color: #666666;
+    font-weight: 800;
+    color: #444444;
+    padding: 5px;
 }
 
 .contact a:hover {
-    color: #009a9a;
+    color: white;
+    background: linear-gradient(60deg, #43cea2, #185a9d);
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-family: "IBM Plex Sans", sans-serif;
+    color: #444444;
+    text-align: center;
+    font-weight: 300;
+}
+
+.footer h5 {
+    margin-bottom: 2%;
+}
+
+.footer a {
+    padding: 5px;
+    color: #444444;
+    font-weight: 800;
+}
+
+.footer a:hover {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(60deg, #43cea2, #185a9d);
 }
