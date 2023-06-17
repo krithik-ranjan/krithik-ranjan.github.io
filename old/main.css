@@ -14,9 +14,10 @@ body {
     color: #009a9a !important;
     font-weight: 800;
     float: left;
-    height: 50px;
+    width: 50%;
+    height: 120px;
 }
-/* .navbar-toggle {
+.navbar-toggle {
     position: relative;
     float: right;
     margin-top: 15px;
@@ -39,21 +40,22 @@ body {
 }
 .navbar-collapse {
     justify-content: flex-end;
-} */
-.row {
-	margin-bottom: 30px;
 }
 
-.header {
+.projects {
 	margin: 4em auto;
     padding-left: 15%;
     padding-right: 15%;
 	position: relative;
 }
 
+.row {
+	margin-bottom: 30px;
+}
+
 .title {
     background-color: #2e3192;
-    background-image: linear-gradient(60deg, #43cea2 0%, #185a9d 60%);
+    background-image: linear-gradient(60deg, #43cea2 0%, #185a9d 100%);
     background-size: 100%;
     background-repeat: repeat;
 	-ms-background-clip: text;
@@ -65,10 +67,10 @@ body {
     background-clip: text;
     color: transparent;
 
-    /* font-size: 36px; */
+    font-size: 64px;
     font-weight: 800;
     font-family: 'IBM Plex Sans Condensed', sans-serif;
-    line-height: 1.2;
+    line-height: 1.3;
 }
 
 .subtitle {
@@ -79,113 +81,35 @@ body {
 }
 
 .subtitle a {
-    color: #2E94A0;
+    color: #444444;
     font-family: 'IBM Plex Sans', sans-serif;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 800;
 }
 
 .subtitle a:hover {
     text-decoration: none;
-    color: #666666;
+    color: #43cea2;
 }
 
-.contact {
-    font-family: "IBM Plex Sans", sans-serif;
-    color: #2E94A0;
-    /* text-align: center; */
-    font-weight: 400;
-}
-
-.contact a {
-    color: #2E94A0;
-    text-decoration: none;
-    font-weight: 400;
-    padding: 5px;
-}
-
-.contact a:hover {
-    text-decoration: none;
-    /* color: white;
-    background: linear-gradient(60deg, #43cea2, #185a9d); */
-}
-.small-arrow {
-    border: solid #2E94A0;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-}
-.contact a:hover .small-arrow {
-    padding: 4px;
-}
-
-.projects {
-	margin: 4em auto;
-    padding-left: 15%;
-    padding-right: 15%;
-	position: relative;
-}
-
-.project-group h3 {
+.project-group h2 {
     color: #222222;
     font-family: 'IBM Plex Sans Condensed', sans-serif;
     text-align: left;
     line-height: 1.5;
-    font-weight: 600;
+    font-weight: 800;
+    padding-left: 5%;
 }
 
 .arrow {
-    border: solid #2E94A0;
+    border: solid #43cea2;
     border-width: 0 5px 5px 0;
     display: inline-block;
-    padding: 6px;
+    padding: 7px;
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
 }
-
-.papers {
-    color: #666666;
-    font-family: 'IBM Plex Sans', sans-serif;
-}
-.papers h5 {
-    font-family: 'IBM Plex Sans Condensed', sans-serif;
-    color: #222222;
-}
-.papers p {
-    font-weight: 300;
-}
-.papers b {
-    font-weight: 500;
-}
-.papers h6 {
-    font-weight: 300;
-}
-
-.col-container {
-    padding-bottom: 20px;
-}
-
-.links a {
-    color: #2E94A0;
-    text-decoration: none;
-    font-weight: 400;
-}
-
-.links a:hover {
-    text-decoration: none;
-    /* color: white;
-    background: linear-gradient(60deg, #43cea2, #185a9d); */
-}
-
-.links a:hover .small-arrow {
-    padding: 4px;
-}
-
-
 
 .container {
     position: relative;
@@ -265,6 +189,55 @@ body {
     border: solid white;
     border-width: 0 2px 2px 0;
     padding: 4px;
+}
+
+.papers {
+    color: #444444;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.papers h5 {
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    color: #222222;
+}
+.papers p {
+    font-weight: 300;
+}
+.papers b {
+    font-weight: 500;
+}
+.papers a {
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    padding: 5px;
+    font-weight: 800;
+    border: 1px solid;
+    /* border-style: solid;
+    border: #444444; */
+    color: #444444;
+}
+.papers a:hover {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(60deg, #43cea2, #185a9d);
+}
+
+.contact {
+    font-family: "IBM Plex Sans", sans-serif;
+    color: #444444;
+    text-align: center;
+    font-weight: 300;
+}
+
+.contact a {
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-decoration: none;
+    font-weight: 800;
+    color: #444444;
+    padding: 5px;
+}
+
+.contact a:hover {
+    color: white;
+    background: linear-gradient(60deg, #43cea2, #185a9d);
 }
 
 .footer {
