@@ -6,8 +6,8 @@ body {
 .navbar {
     background:#fafafa;
     padding-top: 5%;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 .navbar-brand {
     font-family: 'Montserrat', sans-serif;
@@ -46,8 +46,8 @@ body {
 
 .header {
 	margin: 4em auto;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 20%;
+    padding-right: 20%;
 	position: relative;
 }
 
@@ -124,8 +124,8 @@ body {
 
 .projects {
 	margin: 4em auto;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 20%;
+    padding-right: 20%;
 	position: relative;
 }
 
