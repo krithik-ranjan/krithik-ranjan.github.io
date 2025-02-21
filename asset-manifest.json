@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.37672d38.css",
+    "main.js": "/static/js/main.4c97c101.js",
+    "static/media/cartoonimator_paper_tei25.pdf": "/static/media/cartoonimator_paper_tei25.45365c2646c863ddab9c.pdf",
+    "static/media/pp_paper_tei25.pdf": "/static/media/pp_paper_tei25.00f73c82eef5ab40fa18.pdf",
+    "static/media/beholder_paper_siggraph22.pdf": "/static/media/beholder_paper_siggraph22.e021ae95bf64ccd1b483.pdf",
+    "static/media/cartoonimator_poster_idc23.pdf": "/static/media/cartoonimator_poster_idc23.2d6d23e978296c31eb91.pdf",
+    "static/media/therugexperience.jpg": "/static/media/therugexperience.89abda91c3340424f97e.jpg",
+    "static/media/iceagearcade.jpg": "/static/media/iceagearcade.1a2d955ac4b779a878b0.jpg",
+    "static/media/playground.jpg": "/static/media/playground.d6f79661a3351ea01da9.jpg",
+    "static/media/cartoonimator.png": "/static/media/cartoonimator.e2e3f501d6f19ff5eb22.png",
+    "static/media/typingslate.png": "/static/media/typingslate.2f365f4f5125b5846212.png",
+    "static/media/Fall_9-24.jpg": "/static/media/Fall_9-24.1b294d009c9b82eb6b3e.jpg",
+    "static/media/beholder.png": "/static/media/beholder.d4127af357dc063e4746.png",
+    "static/media/Seattle2_7-24.jpg": "/static/media/Seattle2_7-24.c0ae3c88bd364d387a6f.jpg",
+    "static/media/Portland2_4-24.jpg": "/static/media/Portland2_4-24.b8d78e679231d1ac4f2d.jpg",
+    "static/media/RMNP_8-24.jpg": "/static/media/RMNP_8-24.e6413218890b9e0374de.jpg",
+    "static/media/pidog.png": "/static/media/pidog.a47eb0ae2386c35f6e16.png",
+    "static/media/fastrobot.jpg": "/static/media/fastrobot.fff517c163e02752b988.jpg",
+    "static/media/Boulder_11-24.jpg": "/static/media/Boulder_11-24.d78bfe6e54b341c18103.jpg",
+    "static/media/dualstream.png": "/static/media/dualstream.3672be9f9bf2553e192f.png",
+    "static/media/Dunes_3-24.jpg": "/static/media/Dunes_3-24.a1d06db71603d797d702.jpg",
+    "static/media/hammerblade.png": "/static/media/hammerblade.149d6f0b2c775944a1f7.png",
+    "static/media/Turkey_12-24.jpg": "/static/media/Turkey_12-24.513a676285412d846f68.jpg",
+    "static/media/NYC_1-23.jpg": "/static/media/NYC_1-23.9419f568ebaef79b1238.jpg",
+    "static/media/aroundsound.png": "/static/media/aroundsound.679d60f020b90b66acb7.png",
+    "static/media/Seattle1_7-24.jpg": "/static/media/Seattle1_7-24.90a451b9584fdbefbfbf.jpg",
+    "static/media/skinkit.jpg": "/static/media/skinkit.9368d7b6837592756790.jpg",
+    "static/media/Aurora_5-24.jpg": "/static/media/Aurora_5-24.4b038cfb5af68e7eebb2.jpg",
+    "static/media/crok64.png": "/static/media/crok64.a75ae565b1bee3f19bce.png",
+    "index.html": "/index.html",
+    "static/media/logo.svg": "/static/media/logo.de9eb23ab1ebd6ea70739f1d576b284a.svg",
+    "main.37672d38.css.map": "/static/css/main.37672d38.css.map",
+    "main.4c97c101.js.map": "/static/js/main.4c97c101.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.37672d38.css",
+    "static/js/main.4c97c101.js"
+  ]
+}
