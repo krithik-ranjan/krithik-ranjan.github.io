@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.620b1825.css",
-    "main.js": "/static/js/main.dadb3096.js",
+    "main.js": "/static/js/main.cc88500c.js",
     "static/media/cartoonimator_paper_tei25.pdf": "/static/media/cartoonimator_paper_tei25.45365c2646c863ddab9c.pdf",
     "static/media/pp_paper_tei25.pdf": "/static/media/pp_paper_tei25.00f73c82eef5ab40fa18.pdf",
     "static/media/beholder_paper_siggraph22.pdf": "/static/media/beholder_paper_siggraph22.e021ae95bf64ccd1b483.pdf",
@@ -29,13 +29,13 @@
     "static/media/skinkit.jpg": "/static/media/skinkit.9368d7b6837592756790.jpg",
     "static/media/Aurora_5-24.jpg": "/static/media/Aurora_5-24.4b038cfb5af68e7eebb2.jpg",
     "static/media/crok64.png": "/static/media/crok64.a75ae565b1bee3f19bce.png",
+    "static/media/logo.svg": "/static/media/logo.c8b8bb4565c12e0d9821b720bb482ad8.svg",
     "index.html": "/index.html",
-    "static/media/logo.svg": "/static/media/logo.de9eb23ab1ebd6ea70739f1d576b284a.svg",
     "main.620b1825.css.map": "/static/css/main.620b1825.css.map",
-    "main.dadb3096.js.map": "/static/js/main.dadb3096.js.map"
+    "main.cc88500c.js.map": "/static/js/main.cc88500c.js.map"
   },
   "entrypoints": [
     "static/css/main.620b1825.css",
-    "static/js/main.dadb3096.js"
+    "static/js/main.cc88500c.js"
   ]
 }
