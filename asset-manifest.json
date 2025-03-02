@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.620b1825.css",
-    "main.js": "/static/js/main.cc88500c.js",
+    "main.js": "/static/js/main.6db82993.js",
     "static/media/cartoonimator_paper_tei25.pdf": "/static/media/cartoonimator_paper_tei25.45365c2646c863ddab9c.pdf",
     "static/media/pp_paper_tei25.pdf": "/static/media/pp_paper_tei25.00f73c82eef5ab40fa18.pdf",
     "static/media/beholder_paper_siggraph22.pdf": "/static/media/beholder_paper_siggraph22.e021ae95bf64ccd1b483.pdf",
@@ -22,6 +22,7 @@
     "static/media/dualstream.png": "/static/media/dualstream.3672be9f9bf2553e192f.png",
     "static/media/Dunes_3-24.jpg": "/static/media/Dunes_3-24.a1d06db71603d797d702.jpg",
     "static/media/hammerblade.png": "/static/media/hammerblade.149d6f0b2c775944a1f7.png",
+    "static/media/CV_KrithikRanjan.pdf": "/static/media/CV_KrithikRanjan.2bc2333fc635eac68b87.pdf",
     "static/media/Turkey_12-24.jpg": "/static/media/Turkey_12-24.513a676285412d846f68.jpg",
     "static/media/NYC_1-23.jpg": "/static/media/NYC_1-23.9419f568ebaef79b1238.jpg",
     "static/media/aroundsound.png": "/static/media/aroundsound.679d60f020b90b66acb7.png",
@@ -32,10 +33,10 @@
     "static/media/logo.svg": "/static/media/logo.c8b8bb4565c12e0d9821b720bb482ad8.svg",
     "index.html": "/index.html",
     "main.620b1825.css.map": "/static/css/main.620b1825.css.map",
-    "main.cc88500c.js.map": "/static/js/main.cc88500c.js.map"
+    "main.6db82993.js.map": "/static/js/main.6db82993.js.map"
   },
   "entrypoints": [
     "static/css/main.620b1825.css",
-    "static/js/main.cc88500c.js"
+    "static/js/main.6db82993.js"
   ]
 }
