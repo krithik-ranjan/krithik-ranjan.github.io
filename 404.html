@@ -6,7 +6,9 @@
     <script>
       console.log("Page not found. Redirecting...");
       console.log(`${window.location} : ${window.location.pathname} .. ${window.location.search}`)
-      window.location.replace("https://krithik-ranjan.github.io" + window.location.pathname + window.location.search);
+      // window.location.replace("https://krithik-ranjan.github.io" + window.location.pathname + window.location.search);
+    
+      location.href = "https://krithik-ranjan.github.io" + window.location.pathname + window.location.search;
     </script>
   </head>
   <body></body>
