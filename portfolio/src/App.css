@@ -1,0 +1,294 @@
+.App {
+  text-align: left;
+  padding-left: 20%;
+  padding-right: 30%;
+}
+
+.App-header {
+  /* background-color: #ffffff; */
+  padding-top: 5%;
+  /* min-height: 100vh; */
+  /* display: flex; */
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* color: white; */
+}
+
+.App-logo {
+  height: 60px;
+  /* margin-bottom: 20px; */
+  padding-top: 60px;
+  cursor: pointer;
+  /* pointer-events: none; */
+}
+
+.App-header h1 {
+  font-family: 'DM Serif Text', serif;
+  font-weight: 400;
+  font-size: 42px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* Universal body text */
+
+.Body {
+  font-family: 'DM Sans', serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.Body a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #000000;
+}
+
+.Body a:hover {
+  color: #6f6f6f;
+}
+
+.Body h3 {
+  font-family: 'DM Serif Text', serif;
+  font-weight: 400;
+  font-size: 22px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+/* Navigation */
+
+.Nav-menu {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  gap: 15px;
+  display: flex;
+  font-family: 'DM Sans', serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.Nav-item:hover {
+  /* display: flex; */
+  /* font-family: 'DM Sans', serif;
+  font-weight: 600;
+  font-size: 18px; */
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.Nav-selected {
+  font-weight: 800;
+}
+
+/* Research */
+
+.Paper {
+  display: flex;
+  margin: 32px 0 40px 0;
+}
+
+.Paper-image {
+  align-content: center;
+}
+
+.Paper-image img {
+  width: 240px;
+}
+
+.Paper-info {
+  padding-left: 32px;
+}
+
+.Paper-info h3 {
+  font-family: 'DM Serif Text', serif;
+  font-weight: 400;
+  font-size: 22px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.Paper-info p {
+  font-family: 'DM Sans', serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #3c3c3c;
+}
+
+.Paper-info a {
+  font-family: 'DM Sans', serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000000;
+}
+
+.Paper-info a:hover {
+  text-decoration: underline;
+}
+
+/* Creative */
+
+.Project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  /* padding: 20px; */
+}
+
+.Project {
+  text-align: left;
+}
+
+.Project-image img {
+  width: 100%;
+  height: auto;
+}
+
+.Project-info h3 {
+  font-family: 'DM Serif Text', serif;
+  font-weight: 400;
+  font-size: 22px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.Project-info p {
+  font-family: 'DM Sans', serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #3c3c3c;
+}
+
+.Project-info a {
+  font-family: 'DM Sans', serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000000;
+}
+
+.Project-info a:hover {
+  text-decoration: underline;
+}
+
+/* Photos */
+
+.Photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  /* padding: 20px; */
+}
+
+.Photo-grid img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 24px;
+}
+
+/* Footer */
+
+.App-footer {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  font-family: "DM Sans", serif;
+  font-weight: 400;
+  color: #3c3c3c;
+}
+
+.App-footer hr {
+  margin-top: 10px;
+}
+
+.Contact {
+  padding-top: 10px;
+  display: flex;
+}
+
+.Contact-left {
+  width: 50%;
+}
+
+.Contact-right {
+  width: 50%;
+  text-align: right;
+}
+
+.Contact-right a {
+  text-decoration: none;
+  color: #3c3c3c;
+}
+
+.Contact-right a:hover {
+  text-decoration:underline;
+}
+
+/* Responsive for small monitors */
+
+@media (max-width: 1440px) {
+  .App {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
+@media (max-width: 640px) {
+  .App {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .App-header {
+    padding-top: 0%;
+  }
+
+  .App-logo {
+    padding-top: 40px;
+  }
+
+  .App-header h1 {
+    font-size: 36px;
+  }
+
+  .Nav-menu {
+    gap: 8px;
+    font-size: 16px;
+  }
+
+  .Paper {
+    display: block;
+  }
+
+  .Paper-image img {
+    width: 100%;
+  }
+
+  .Paper-info {
+    padding-left: 0px;
+  }
+
+  .Project-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .Photo-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0px;
+  }
+
+  .Contact {
+    display: block;
+  }
+
+  .Contact-left {
+    width: 100%;
+    padding-bottom: 8px;
+  }
+
+  .Contact-right {
+    width: 100%;
+    text-align: left;
+    padding-bottom: 8px;
+  }
+}
