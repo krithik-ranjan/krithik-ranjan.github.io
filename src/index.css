@@ -1,0 +1,363 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  /* place-items: center; */
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+h3 {
+  font-family: 'DM Serif Text', serif;
+  font-weight: 400;
+  font-size: 24px;
+  margin-top: 8px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
+
+.App {
+  text-align: left;
+  padding-left: 15%;
+  padding-right: 25%;
+}
+
+.App-header {
+  /* background-color: #ffffff; */
+  padding-top: 2%;
+  /* min-height: 100vh; */
+  /* display: flex; */
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* color: white; */
+}
+
+.App-logo {
+  height: 60px;
+  /* margin-bottom: 20px; */
+  padding-top: 60px;
+  cursor: pointer;
+  /* pointer-events: none; */
+}
+
+.App-header h1 {
+  font-family: 'DM Serif Text', serif;
+  font-weight: 400;
+  font-size: 42px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.App-header a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* Universal body text */
+
+.Body {
+  font-family: 'DM Sans', serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.Body a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #000000;
+}
+
+.Body a:hover {
+  color: #6f6f6f;
+}
+
+.Body h3 {
+  font-family: 'DM Serif Text', serif;
+  font-weight: 400;
+  font-size: 22px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+/* Navigation */
+
+.Nav-menu {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  gap: 15px;
+  display: flex;
+  font-family: 'DM Sans', serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.Nav-item:hover {
+  /* display: flex; */
+  /* font-family: 'DM Sans', serif;
+  font-weight: 600;
+  font-size: 18px; */
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.Nav-selected {
+  font-weight: 800;
+}
+
+.Nav-item a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* Research */
+
+.Paper {
+  display: flex;
+  margin: 20px 0 20px 0;
+}
+
+.Paper-image {
+  align-content: center;
+}
+
+.Paper-image img {
+  width: 240px;
+}
+
+.Paper-info {
+  padding-left: 20px;
+}
+
+.Paper-info h3 {
+  font-family: 'DM Serif Text', serif;
+  font-weight: 400;
+  font-size: 22px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.Paper-info p {
+  font-family: 'DM Sans', serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #3c3c3c;
+}
+
+.Paper-info a {
+  font-family: 'DM Sans', serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000000;
+}
+
+.Paper-info a:hover {
+  text-decoration: underline;
+}
+
+/* Creative */
+
+.Project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  /* padding: 20px; */
+}
+
+.Project {
+  text-align: left;
+}
+
+.Project-image img {
+  width: 100%;
+  height: auto;
+}
+
+.Project-info h3 {
+  font-family: 'DM Serif Text', serif;
+  font-weight: 400;
+  font-size: 22px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.Project-info h4 {
+  font-family: 'DM Serif Text', serif;
+  font-weight: 200;
+  font-size: 20px;
+  margin-top: 8px;
+  margin-bottom: 2px;
+}
+
+.Project-info p {
+  font-family: 'DM Sans', serif;
+  font-weight: 300;
+  font-size: 16px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  color: #3c3c3c;
+}
+
+.Project-info a {
+  font-family: 'DM Sans', serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000000;
+}
+
+.Project-info a:hover {
+  text-decoration: underline;
+}
+
+/* Photos */
+
+.Photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  /* padding: 20px; */
+}
+
+.Photo-grid img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 24px;
+}
+
+/* Footer */
+
+.App-footer {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  font-family: "DM Sans", serif;
+  font-weight: 400;
+  color: #3c3c3c;
+}
+
+.App-footer hr {
+  margin-top: 10px;
+  opacity: 40%;
+}
+
+.Contact {
+  padding-top: 10px;
+  display: flex;
+}
+
+.Contact-left {
+  width: 50%;
+}
+
+.Contact-right {
+  width: 50%;
+  text-align: right;
+}
+
+.Contact-right a {
+  text-decoration: none;
+  color: #3c3c3c;
+}
+
+.Contact-right a:hover {
+  text-decoration:underline;
+}
+
+/* Responsive for small monitors */
+
+@media (max-width: 1440px) {
+  .App {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
+@media (max-width: 640px) {
+  .App {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .App-header {
+    padding-top: 0%;
+  }
+
+  .App-logo {
+    padding-top: 40px;
+  }
+
+  .App-header h1 {
+    font-size: 36px;
+  }
+
+  .Nav-menu {
+    gap: 8px;
+    font-size: 16px;
+  }
+
+  .Paper {
+    display: block;
+  }
+
+  .Paper-image img {
+    width: 100%;
+  }
+
+  .Paper-info {
+    padding-left: 0px;
+  }
+
+  .Project-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .Photo-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0px;
+  }
+
+  .Contact {
+    display: block;
+  }
+
+  .Contact-left {
+    width: 100%;
+    padding-bottom: 8px;
+  }
+
+  .Contact-right {
+    width: 100%;
+    text-align: left;
+    padding-bottom: 8px;
+  }
+}
