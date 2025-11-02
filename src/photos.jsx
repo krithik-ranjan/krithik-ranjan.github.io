@@ -5,6 +5,7 @@ import './index.css'
 
 import Head from './components/Head'
 import Foot from './components/Foot'
+import Nav from './components/Nav'
 
 import Boulder_11_24 from './assets/photos/Boulder_11-24.jpg';
 import Turkey_12_24 from './assets/photos/Turkey_12-24.jpg';
@@ -26,11 +27,13 @@ function Photos() {
         <p>In my free time, I like to take photos of interesting things and unique perspectives using either a digital mirrorless camera, or an old film camera. Here are some of my favorite shots I've taken.</p>
       </div>
 
-      <div className="Nav-menu">
+      <Nav active='Photos' />
+
+      {/* <div className="Nav-menu">
         <div className="Nav-item"><a href="/pages/projects.html">PROJECTS</a></div><div>&#9671;</div>
         <div className="Nav-item"><a href="/pages/publications.html">PUBLICATIONS</a></div><div>&#9671;</div>
         <div className="Nav-item"><a href="/pages/photos.html"><strong>PHOTOS</strong></a></div><div>&#9671;</div>
-      </div>
+      </div> */}
 
       <div className="Photo-grid">
         <div className="Photo-col">

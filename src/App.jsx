@@ -11,8 +11,9 @@ import './App.css';
 function App() {
   return (
     <div className='App'>
-      <Head title={"Hello! I'm Krithik Ranjan"} />
+      {/* <Head title={"Hello! I'm Krithik Ranjan. I am a designer, engineer, and researcher, passionate about imagining and developing creative interactive technologies."} /> */}
       
+
       <div className='Body'>
         <p>I'm a Ph.D. candidate in <a href='https://www.colorado.edu/atlas/academics/grad/ctd-phd'>Creative Technology and Design (CTD)</a> at the ATLAS Institute, University of Colorado Boulder, where I am advised by <a href="https://www.colorado.edu/atlas/ellen-yi-luen-do">Prof. Ellen Do</a> and <a href="https://www.colorado.edu/atlas/michael-rivera">Prof. Michael Rivera</a>.</p>
         <p>I am a designer, engineer, and researcher passionate about imagining and developing innovative interactive technologies. In my Ph.D., I am exploring creative learning technologies and tangible, multimodal interfaces. I develop creative tools that enable students and beginners to tinker with computing and engage with computational thinking. </p>

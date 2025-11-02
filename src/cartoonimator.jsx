@@ -17,16 +17,23 @@ import SkaterAnim from './assets/cartoonimator/skater.gif'
 import SkierImage from './assets/cartoonimator/skier.jpg'
 import SkierAnim from './assets/cartoonimator/skier.gif'
 
+import red from './assets/shape-red.svg'
+import green from './assets/shape-green.svg'
+import yellow from './assets/shape-yellow.svg'
+import purple from './assets/shape-purple.svg'
+
 function Cartoonimator() {
   return (
     <div className='App'>
-      <Head title={"Cartoonimator"} />
+      <Head />
+
+      <h3>Cartoonimator</h3>
 
       <div className="Nav-menu">
-        <div className="Nav-item"><a href="https://krithik-ranjan.github.io/cartoonimator/">TRY IT</a></div><div>&#9671;</div>
-        <div className="Nav-item"><a href="https://dl.acm.org/doi/10.1145/3689050.3704955">PAPER</a></div><div>&#9671;</div>
-        <div className="Nav-item"><a href="https://youtu.be/nwF2i81Sguw">VIDEO</a></div><div>&#9671;</div>
-        <div className="Nav-item"><a href="https://youtu.be/nwF2i81Sguw">GITHUB</a></div><div>&#9671;</div>
+        <div className="Nav-item"><a className='A-Red' href="https://krithik-ranjan.github.io/cartoonimator/">TRY IT</a><img src={red} /></div>
+        <div className="Nav-item"><a className='A-Green' href="https://dl.acm.org/doi/10.1145/3689050.3704955">PAPER</a><img src={green} /></div>
+        <div className="Nav-item"><a className='A-Yellow' href="https://youtu.be/nwF2i81Sguw">VIDEO</a><img src={yellow} /></div>
+        <div className="Nav-item"><a className='A-Purple' href="https://youtu.be/nwF2i81Sguw">GITHUB</a><img src={purple} /></div>
       </div>
       
       <div className='Body'>  

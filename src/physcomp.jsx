@@ -11,15 +11,22 @@ import Beholder2 from './assets/research/beholder2.png'
 import PaperPlayground from './assets/physcomp/paper_playground.jpg'
 import BeholderElectron from './assets/physcomp/beholder_electron.jpg'
 
+import red from './assets/shape-red.svg'
+import green from './assets/shape-green.svg'
+import yellow from './assets/shape-yellow.svg'
+import purple from './assets/shape-purple.svg'
+
 function PhysComp() {
   return (
     <div className='App'>
-      <Head title={"CV-driven Physical Computing"} />
+      <Head />
+
+      <h3>CV-driven Physical Computing</h3>
 
       <div className="Nav-menu">
-        <div className="Nav-item"><a href="https://dl.acm.org/doi/10.1145/3550471.3564764">BEHOLDER PAPER</a></div><div>&#9671;</div>
-        <div className="Nav-item"><a href="https://github.com/project-beholder/beholder-app">BEHOLDER GITHUB</a></div><div>&#9671;</div>
-        <div className="Nav-item"><a href="https://dl.acm.org/doi/10.1145/3689050.3705981">PP PAPER</a></div><div>&#9671;</div>
+        <div className="Nav-item"><a className='A-Red' href="https://dl.acm.org/doi/10.1145/3550471.3564764">BEHOLDER PAPER</a><img src={red} /></div>
+        <div className="Nav-item"><a className='A-Green' href="https://github.com/project-beholder/beholder-app">BEHOLDER GITHUB</a><img src={green} /></div>
+        <div className="Nav-item"><a className='A-Yellow' href="https://dl.acm.org/doi/10.1145/3689050.3705981">PAPER PLAYGROUND PAPER</a><img src={yellow} /></div>
       </div>
       
       <div className='Body'>  

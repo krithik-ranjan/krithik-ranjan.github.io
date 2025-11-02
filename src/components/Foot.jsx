@@ -1,5 +1,9 @@
 import CV from '../assets/CV_KrithikRanjan.pdf';
 
+import red from '../assets/shape-red.svg'
+import green from '../assets/shape-green.svg'
+import yellow from '../assets/shape-yellow.svg'
+
 export default function Foot() {
   return (
     <div className="App-footer">
@@ -9,7 +13,7 @@ export default function Foot() {
           krithik.ranjan@gmail.com
           </div>
           <div className="Contact-right">
-          <a href={CV}>CV</a>&ensp;&#9671;&ensp;<a href="https://scholar.google.com/citations?user=bJ26JeEAAAAJ&hl=en">SCHOLAR</a>&ensp;&#9671;&ensp;<a href="https://www.linkedin.com/in/krithik-ranjan/">LINKEDIN</a>
+          <a className='A-Red' href={CV}>CV</a><img src={red} /><a className='A-Green' href="https://scholar.google.com/citations?user=bJ26JeEAAAAJ&hl=en">SCHOLAR</a><img src={green} /><a className='A-Yellow'href="https://www.linkedin.com/in/krithik-ranjan/">LINKEDIN</a><img src={yellow} />
           </div>
         </div>
       </div>

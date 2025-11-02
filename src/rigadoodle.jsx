@@ -9,11 +9,18 @@ import Foot from './components/Foot'
 import Teaser from './assets/rigadoodle/teaser.jpg'
 import Demo from './assets/rigadoodle/demo.gif'
 
+import red from './assets/shape-red.svg'
+import green from './assets/shape-green.svg'
+import yellow from './assets/shape-yellow.svg'
+import purple from './assets/shape-purple.svg'
+
 function RigADoodle() {
   return (
     <div className='App'>
-      <Head title={"Rig-A-Doodle"} />
+      <Head />
       
+      <h3>Rig-A-Doodle</h3>
+
       <div className='Body'>  
         <p>Rig-A-Doodle is a tangible toolkit that invites children and beginners to experience character animations from the ground up. With this kit, you can draw a character, construct a skeleton or “rig” for it using everyday materials, and then manipulate it to see your character come to life. Inspired by <a href="https://sketch.metademolab.com/">Animated Drawings</a> project at Meta.</p>
 

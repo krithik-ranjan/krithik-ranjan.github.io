@@ -10,15 +10,22 @@ import App from './assets/orbitsim/app.jpg'
 import Instr from './assets/orbitsim/instructions.png'
 import Classroom from './assets/orbitsim/classroom.jpg'
 
+import red from './assets/shape-red.svg'
+import green from './assets/shape-green.svg'
+import yellow from './assets/shape-yellow.svg'
+import purple from './assets/shape-purple.svg'
+
 function OrbitSim() {
   return (
     <div className='App'>
-      <Head title={"OrbitSim"} />
+      <Head />
+
+      <h3>OrbitSim</h3>
 
       <div className="Nav-menu">
-        <div className="Nav-item"><a href="https://atlas-acme-lab.github.io/orbitsim-app/">TRY IT</a></div><div>&#9671;</div>
-        <div className="Nav-item"><a href="https://www.youtube.com/watch?v=sJQlYDNoPIs">VIDEO</a></div><div>&#9671;</div>
-        <div className="Nav-item"><a href="https://github.com/atlas-acme-lab/orbitsim-app">GITHUB</a></div><div>&#9671;</div>
+        <div className="Nav-item"><a className='A-Red' href="https://atlas-acme-lab.github.io/orbitsim-app/">TRY IT</a><img src={red} /></div>
+        <div className="Nav-item"><a className='A-Green' href="https://www.youtube.com/watch?v=sJQlYDNoPIs">VIDEO</a><img src={green} /></div>
+        <div className="Nav-item"><a className='A-Yellow' href="https://github.com/atlas-acme-lab/orbitsim-app">GITHUB</a><img src={yellow} /></div>
       </div>
       
       <div className='Body'>  
