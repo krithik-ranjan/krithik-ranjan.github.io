@@ -388,6 +388,18 @@ iframe {
     padding-right: 7%;
   }
 
+  h3 {
+    font-size: 1.8em;
+  }
+
+  h4 {
+    font-size: 1.6em;
+  }
+
+  h5 {
+    font-size: 1.2em;
+  }
+
   .App-header {
     padding-top: 0%;
   }
@@ -401,8 +413,16 @@ iframe {
   }
 
   .Nav-menu {
-    gap: 8px;
+    gap: 6px;
     font-size: 16px;
+  }
+
+  .Nav-item {
+    gap: 2px;
+  }
+
+  .Nav-item img {
+    height: 12px;
   }
 
   .Paper {
@@ -437,7 +457,8 @@ iframe {
 
   .Contact-right {
     width: 100%;
-    text-align: left;
+    justify-content: flex-start;
+    /* text-align: left; */
     padding-bottom: 8px;
   }
 }
