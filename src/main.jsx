@@ -7,9 +7,9 @@ import Head from './components/Head'
 import Foot from './components/Foot'
 import Nav from './components/Nav'
 
-import Cartoonimator from './assets/research/cartoonimator.png'
+import Cartoonimator from './assets/research/cartoonimator2.png'
 import Beholder from './assets/research/beholder2.png'
-import RigADoodle from './assets/rigadoodle/theme.png'
+import RigADoodle from './assets/research/rigadoodle.png'
 
 function Home() {
   return (

@@ -8,7 +8,7 @@ import Foot from './components/Foot'
 
 import Cartoonimator_paper from './assets/papers/cartoonimator_paper_tei25.pdf';
 import Instr from './assets/cartoonimator/instr.png'
-import Components from './assets/cartoonimator/components.jpg'
+import Components from './assets/cartoonimator/components.png'
 import Workshops from './assets/cartoonimator/kids.png'
 import SpideyAnim from './assets/cartoonimator/spidey.gif'
 import FishcarAnim from './assets/cartoonimator/fishcar.gif'
@@ -33,7 +33,7 @@ function Cartoonimator() {
         <div className="Nav-item"><a className='A-Red' href="https://krithik-ranjan.github.io/cartoonimator/">TRY IT</a><img src={red} /></div>
         <div className="Nav-item"><a className='A-Green' href="https://dl.acm.org/doi/10.1145/3689050.3704955">PAPER</a><img src={green} /></div>
         <div className="Nav-item"><a className='A-Yellow' href="https://youtu.be/nwF2i81Sguw">VIDEO</a><img src={yellow} /></div>
-        <div className="Nav-item"><a className='A-Purple' href="https://youtu.be/nwF2i81Sguw">GITHUB</a><img src={purple} /></div>
+        <div className="Nav-item"><a className='A-Purple' href="https://github.com/krithik-ranjan/cartoonimator">GITHUB</a><img src={purple} /></div>
       </div>
       
       <div className='Body'>  
@@ -52,13 +52,13 @@ function Cartoonimator() {
         
         <img src={Instr} width="95%" alt="Instructions" style={{ "display": "inline-block" }}/> 
 
-        <p>To animate with cartoonimator, you first draw your scene background and characters on the paper template. Then, you use the web application to capture the keyframes and play the animation. The application uses computer vision and image processing techniques to transform your keyframe images into seamless animations.</p>
+        <p>To animate with Cartoonimator, you first draw your scene background and characters on the paper template. Then, you use the web application to capture the keyframes and play the animation. The application uses computer vision and image processing techniques to transform your keyframe images into seamless animations.</p>
 
         <img src={Components} width="80%" alt="Components" style={{ "display": "block", "margin": "0 auto"}}/> 
              
         <p>Through workshops and user studies, my team evaluated Cartoonimator's effectiveness in making animation accessible and enjoyable. Participants reported that the tangible approach lowered barriers to entry, encouraged creativity, and made the animation process more intuitive compared to traditional software tools.</p>
 
-        <img src={Workshops} width="100%" alt="Workshops" style={{ "display": "block", "margin": "0 auto", "paddingBottom": "20px"}}/> 
+        <img src={Workshops} width="80%" alt="Workshops" style={{ "display": "block", "margin": "0 auto", "paddingBottom": "20px"}}/> 
 
         <p>Here are some of the animations Cartoonimators have created!</p>
 
