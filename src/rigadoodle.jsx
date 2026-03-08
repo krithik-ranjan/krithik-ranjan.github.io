@@ -33,6 +33,8 @@ function RigADoodle() {
         <p>Character animation remains challenging for novices and children despite advances in digital tools. While recent tangible interfaces have lowered barriers by enabling creators to animate their drawings on paper, they are limited to preset animation sequences and support for only human-like characters. </p>
         <p>Rig-A-Doodle is a tangible toolkit and web application that invites children and beginners to experience character animations from the ground up. With this kit, you can draw a character, construct a skeleton or “rig” for it using everyday materials, and then manipulate it to see your character come to life.</p>
 
+        <p>This project was conducted in collaboration with <a href="https://khushbukshirsagar.weebly.com/about.html">Khushbu Kshirsagar</a> and <a href="">Harrison Jesse Smith</a> </p>
+
         <img src={System} width="80%" alt="Rig-A-Doodle concept" style={{ "display": "block", "margin": "0 auto"}} />
 
         <p>I designed Rig-A-Doodle as a "kit with no parts"; i.e., it allows you to create your rig with any materials like clay and sticks to foster flexibility and tinkering. The Rig-A-Doodle application uses computer vision (CV) algorithms and As-Rigid-As-Possible (ARAP) deformation to animate the drawings.</p>
