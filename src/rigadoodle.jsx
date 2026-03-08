@@ -24,7 +24,7 @@ function RigADoodle() {
 
       <div className="Nav-menu">
         <div className="Nav-item"><a className='A-Red' href="https://rig-a-doodle.onrender.com/">TRY IT</a><img src={red} /></div>
-        {/* <div className="Nav-item"><a className='A-Green' href="https://youtu.be/jnKX_02ZzHs">PAPER</a><img src={green} /></div> */}
+        <div className="Nav-item"><a className='A-Green' href="https://dl.acm.org/doi/10.1145/3731459.3779320">PAPER</a><img src={green} /></div>
         <div className="Nav-item"><a className='A-Yellow' href="https://youtu.be/nwF2i81Sguw">VIDEO</a><img src={yellow} /></div>
         <div className="Nav-item"><a className='A-Purple' href="https://github.com/krithik-ranjan/rig-a-doodle">GITHUB</a><img src={purple} /></div>
       </div>
