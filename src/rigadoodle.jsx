@@ -37,7 +37,7 @@ function RigADoodle() {
 
         <img src={System} width="80%" alt="Rig-A-Doodle concept" style={{ "display": "block", "margin": "0 auto"}} />
 
-        <p>I designed Rig-A-Doodle as a "kit with no parts"; i.e., it allows you to create your rig with any materials like clay and sticks to foster flexibility and tinkering. The Rig-A-Doodle application uses computer vision (CV) algorithms and As-Rigid-As-Possible (ARAP) deformation to animate the drawings.</p>
+        <p>We designed Rig-A-Doodle as a "kit with no parts"; i.e., it allows you to create your rig with any materials like clay and sticks to foster flexibility and tinkering. The Rig-A-Doodle application uses computer vision (CV) algorithms and As-Rigid-As-Possible (ARAP) deformation to animate the drawings.</p>
 
         <p>To animated with Rig-a-Doodle, you first draw the character on the paper template and capture it using the web app. Then, you construct the rig for the character using any materials and assign the "control pins" that will control the character's deformation using the set of CV markers. Once the character drawing and rig has been captured, you can begin manipulating the rig to animate the character in real-time.</p>
 
