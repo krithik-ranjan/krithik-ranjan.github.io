@@ -383,6 +383,10 @@ iframe {
 }
 
 @media (max-width: 640px) {
+  body {
+    width: 100%;
+  }
+
   .App {
     padding-left: 7%;
     padding-right: 7%;
@@ -423,6 +427,14 @@ iframe {
 
   .Nav-item img {
     height: 12px;
+  }
+
+  .Body {
+    width: 88vw;
+  }
+
+  .Body img {
+    width: 100%;
   }
 
   .Paper {

@@ -43,7 +43,7 @@ function RigADoodle() {
 
         {/* <img src={Demo} width="80%" alt="Rig-A-Doodle Demo" style={{ "display": "block", "margin": "0 auto"}}/>  */}
         
-        <div style={{ "display": "flex", "justifyContent": "center", "marginTop": "20px", "marginBottom": "20px" }}>
+        <div style={{ "display": "flex", "justifyContent": "center", "marginTop": "20px", "marginBottom": "20px", "aspectRatio": "16/9" }}>
           <iframe width="720" height="420" src="https://www.youtube.com/embed/jnKX_02ZzHs?si=l6vamm1ba89yu0_U" title="Rig-a-Doodle" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       </div>
