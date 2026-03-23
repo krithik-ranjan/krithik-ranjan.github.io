@@ -17,6 +17,7 @@ export default defineConfig({
         publications: resolve(__dirname, 'pages/publications.html'),
         photos: resolve(__dirname, 'pages/photos.html'),
         comp: resolve(__dirname, 'pages/comp.html'),
+        defense: resolve(__dirname, 'pages/defense.html'),
         cartoonimator: resolve(__dirname, 'pages/cartoonimator.html'),
         orbitsim: resolve(__dirname, 'pages/orbitsim.html'),
         rigadoodle: resolve(__dirname, 'pages/rigadoodle.html'),

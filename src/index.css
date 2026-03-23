@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Geist:wght@100..900&display=swap');
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -12,8 +14,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Geist:wght@100..900&display=swap');
 
 body {
   margin: 0;
@@ -473,4 +473,51 @@ iframe {
     /* text-align: left; */
     padding-bottom: 8px;
   }
+}
+
+
+/* Styles for defense page */
+
+.Body-defense {
+  display: flex;
+  flex-direction: row;
+  gap: 4%;
+  text-align: justify;
+}
+
+.Body-defense-col {
+  width: 48%;
+}
+
+.Exam-info {
+  text-align: left;
+  font-size: 1.2em;
+  font-family: Geist, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.Info-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.Label {
+  font-size: 1.1em;
+  font-family: Arvo, serif;
+  font-weight: 500;
+  text-decoration: solid underline #ff7863 3px;
+}
+
+.Body-defense h5 {
+  text-decoration: solid underline #6fcb9f 3px;
+}
+
+.Info-item a {
+  font-weight: 700;
+  color: #ffffff;
 }
