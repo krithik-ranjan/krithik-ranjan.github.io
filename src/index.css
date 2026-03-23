@@ -386,8 +386,8 @@ iframe {
   body {
     width: 100%;
   }
-
   .App {
+    width: 86vw;
     padding-left: 7%;
     padding-right: 7%;
   }
@@ -520,4 +520,25 @@ iframe {
 .Info-item a {
   font-weight: 700;
   color: #ffffff;
+}
+
+iframe {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .Body-defense {
+    flex-direction: column;
+    width: 100%;
+  }
+  .Body-defense-col {
+    width: 100%;
+  }
+  .Exam-info {
+    width: 100%;
+    font-size: 1em;
+  }
+  .Body-defense p {
+    font-size: 1em;
+  }
 }
