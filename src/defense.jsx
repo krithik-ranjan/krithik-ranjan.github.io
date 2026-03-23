@@ -6,6 +6,8 @@ import './index.css'
 import Head from './components/Head'
 import Foot from './components/Foot'
 
+import DissertationCover from'./assets/dissertation-cover.png'
+
 function Comp() {
   return (
     <div className='App'>
@@ -34,7 +36,7 @@ function Comp() {
             </div>
             <div className='Info-item'>
               <span className='Label'>Document</span>
-              <span>Linked <a href="https://o365coloradoedu-my.sharepoint.com/personal/krra7012_colorado_edu/_layouts/15/embed.aspx?UniqueId=1d49756f-9b8b-46fb-8e2f-c1ad6ddc14ee" target="_blank" rel="noopener noreferrer">here</a></span>
+              <span>Linked <a href="https://drive.google.com/file/d/14DwfmJhgy8jn2__QjE9kPdyjW7-peJj2/view?usp=sharing" target="_blank" rel="noopener noreferrer">here</a></span>
             </div>
           </div>
 
@@ -46,7 +48,10 @@ function Comp() {
         
 
         <div className='Body-defense-col'>
-          <iframe src="https://o365coloradoedu-my.sharepoint.com/personal/krra7012_colorado_edu/_layouts/15/embed.aspx?UniqueId=1d49756f-9b8b-46fb-8e2f-c1ad6ddc14ee" width="640" height="960" frameborder="0" scrolling="no" allowfullscreen title="Krithik Ranjan - Dissertation Draft 3-23"></iframe>
+          {/* <iframe src="https://o365coloradoedu-my.sharepoint.com/personal/krra7012_colorado_edu/_layouts/15/embed.aspx?UniqueId=1d49756f-9b8b-46fb-8e2f-c1ad6ddc14ee" width="640" height="960" frameborder="0" scrolling="no" allowfullscreen title="Krithik Ranjan - Dissertation Draft 3-23"></iframe> */}
+          <a href='https://drive.google.com/file/d/14DwfmJhgy8jn2__QjE9kPdyjW7-peJj2/view?usp=sharing' target='_blank' rel='noopener noreferrer'>
+            <img src={DissertationCover} alt="Dissertation Cover" width="100%" />
+          </a>
         </div>
 
       </div>
