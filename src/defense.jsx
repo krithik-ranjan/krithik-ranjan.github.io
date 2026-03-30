@@ -6,7 +6,7 @@ import './index.css'
 import Head from './components/Head'
 import Foot from './components/Foot'
 
-import DissertationCover from'./assets/dissertation-cover.png'
+import DissertationCover from'./assets/research/dissertation-cover.png'
 
 function Comp() {
   return (
@@ -20,7 +20,7 @@ function Comp() {
           <div className="Exam-info">
             <div className='Info-item'>
               <span className='Label'>Title</span>
-              <span>Designing for Maker Agency through Material Engagement in Creative Computing</span>
+              <span>Computing Outside Computers: Designing Material Interfaces for Creative Thinking</span>
             </div>
             <div className='Info-item'>
               <span className='Label'>Date</span>
@@ -36,7 +36,7 @@ function Comp() {
             </div>
             <div className='Info-item'>
               <span className='Label'>Document</span>
-              <span>Linked <a href="https://drive.google.com/file/d/14DwfmJhgy8jn2__QjE9kPdyjW7-peJj2/view?usp=sharing" target="_blank" rel="noopener noreferrer">here</a></span>
+              <span>Linked <a href="https://o365coloradoedu-my.sharepoint.com/:b:/g/personal/krra7012_colorado_edu/IQARqmPhrQVsR6z1JlNHLT3yAUSiH0V6bn4AST4vU_pbMyU?e=d6bNgi" target="_blank" rel="noopener noreferrer">here</a></span>
             </div>
           </div>
 
