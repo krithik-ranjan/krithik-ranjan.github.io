@@ -28,7 +28,7 @@ function Comp() {
             </div>
             <div className='Info-item'>
               <span className='Label'>Location</span>
-              <span>Hackery (ATLS 208) or <a href="https://zoom.us/j/91234567890" target="_blank" rel="noopener noreferrer">Zoom</a></span>
+              <span>Hackery (ATLS 208) or <a href="https://zoom.us/j/91234567890" target="_blank" rel="noopener noreferrer">Zoom (https://zoom.us/j/91234567890)</a></span>
             </div>
             <div className='Info-item'>
               <span className='Label'>Committee</span>
@@ -36,9 +36,13 @@ function Comp() {
             </div>
             <div className='Info-item'>
               <span className='Label'>Document</span>
-              <span>Linked <a href="https://o365coloradoedu-my.sharepoint.com/:b:/g/personal/krra7012_colorado_edu/IQARqmPhrQVsR6z1JlNHLT3yAUSiH0V6bn4AST4vU_pbMyU?e=d6bNgi" target="_blank" rel="noopener noreferrer">here</a></span>
+              <span>Linked <a href="https://o365coloradoedu-my.sharepoint.com/:b:/g/personal/krra7012_colorado_edu/IQBXB0cLtZgUSJH03DLBA2w4AUKtDYPE5uurHW1ocKN8aF0?e=3f1VIO" target="_blank" rel="noopener noreferrer">here</a></span>
             </div>
           </div>
+
+          <h5>Presentation</h5>
+
+          <iframe style={{border: "1px solid rgba(0, 0, 0, 0.1);"}} width="800" height="450" src="https://embed.figma.com/proto/2xPHZwrtETBB5WTAw2t00x/PhD-Defense---Krithik-Ranjan?node-id=702-750&p=f&scaling=scale-down-width&content-scaling=fixed&page-id=702%3A2&starting-point-node-id=702%3A750&embed-host=share"></iframe>
 
           <h5>Abstract</h5>
           <p>Since the beginning of computing technology, we have used it as an extension of our creativity. Whether it is to create music, produce art, develop interactive games, or write a novel; this creative potential of technology to realize my wild ideas is what first engaged me with computers. Our interactions with computers seem to have evolved separately from the profound material history of humanity, converging to these small glass screens with touch or button input for "efficient" interaction. On one hand, we sketch with charcoal or sculpt with clay on a wheel, and on the other, we use mouse clicks (and now text prompts) to make digital art or 3D models. In my research, I explore how we can bring creative technologies back to being a natural, craft-like practice by designing technology interactions based on physical materials like paper and cardboard. I present creative technology experiences I designed collaboratively to support open-ended creativity and tinkering across domains like animation, science simulation and physical computing.</p>
@@ -49,7 +53,7 @@ function Comp() {
 
         <div className='Body-defense-col'>
           {/* <iframe src="https://o365coloradoedu-my.sharepoint.com/personal/krra7012_colorado_edu/_layouts/15/embed.aspx?UniqueId=1d49756f-9b8b-46fb-8e2f-c1ad6ddc14ee" width="640" height="960" frameborder="0" scrolling="no" allowfullscreen title="Krithik Ranjan - Dissertation Draft 3-23"></iframe> */}
-          <a href='https://o365coloradoedu-my.sharepoint.com/:b:/g/personal/krra7012_colorado_edu/IQARqmPhrQVsR6z1JlNHLT3yAUSiH0V6bn4AST4vU_pbMyU?e=d6bNgi' target='_blank' rel='noopener noreferrer'>
+          <a href='https://o365coloradoedu-my.sharepoint.com/:b:/g/personal/krra7012_colorado_edu/IQBXB0cLtZgUSJH03DLBA2w4AUKtDYPE5uurHW1ocKN8aF0?e=3f1VIO' target='_blank' rel='noopener noreferrer'>
             <img src={DissertationCover} alt="Dissertation Cover" width="100%" />
           </a>
         </div>
