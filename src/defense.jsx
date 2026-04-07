@@ -28,7 +28,9 @@ function Comp() {
             </div>
             <div className='Info-item'>
               <span className='Label'>Location</span>
-              <span>Hackery (ATLS 208) or <a href="https://zoom.us/j/91234567890" target="_blank" rel="noopener noreferrer">Zoom (https://zoom.us/j/91234567890)</a></span>
+              <span>Hackery (ATLS 208) or <a href="
+https://cuboulder.zoom.us/j/97506727714" target="_blank" rel="noopener noreferrer">Zoom (
+https://cuboulder.zoom.us/j/97506727714)</a></span>
             </div>
             <div className='Info-item'>
               <span className='Label'>Committee</span>
