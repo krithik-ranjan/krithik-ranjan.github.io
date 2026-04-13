@@ -42,9 +42,13 @@ https://cuboulder.zoom.us/j/97506727714)</a></span>
             </div>
           </div>
 
+          <h5>Recording</h5>
+
+          <iframe width="720" height="360" src="https://www.youtube.com/embed/tN7bMnC8RVc?si=frLo1CyfZtVc05xT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
           <h5>Presentation</h5>
 
-          <iframe style={{border: "1px solid rgba(0, 0, 0, 0.1);"}} width="800" height="450" src="https://embed.figma.com/proto/2xPHZwrtETBB5WTAw2t00x/PhD-Defense---Krithik-Ranjan?node-id=702-750&p=f&scaling=scale-down-width&content-scaling=fixed&page-id=702%3A2&starting-point-node-id=702%3A750&embed-host=share"></iframe>
+          <iframe style={{border: "1px solid rgba(0, 0, 0, 0.1);"}} width="800" height="420" src="https://embed.figma.com/proto/2xPHZwrtETBB5WTAw2t00x/PhD-Defense---Krithik-Ranjan?node-id=702-750&p=f&scaling=scale-down-width&content-scaling=fixed&page-id=702%3A2&starting-point-node-id=702%3A750&embed-host=share"></iframe>
 
           <h5>Abstract</h5>
           <p>Since the beginning of computing technology, we have used it as an extension of our creativity. Whether it is to create music, produce art, develop interactive games, or write a novel; this creative potential of technology to realize my wild ideas is what first engaged me with computers. Our interactions with computers seem to have evolved separately from the profound material history of humanity, converging to these small glass screens with touch or button input for "efficient" interaction. On one hand, we sketch with charcoal or sculpt with clay on a wheel, and on the other, we use mouse clicks (and now text prompts) to make digital art or 3D models. In my research, I explore how we can bring creative technologies back to being a natural, craft-like practice by designing technology interactions based on physical materials like paper and cardboard. I present creative technology experiences I designed collaboratively to support open-ended creativity and tinkering across domains like animation, science simulation and physical computing.</p>
