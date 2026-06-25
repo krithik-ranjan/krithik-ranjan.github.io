@@ -26,12 +26,12 @@ function Comp() {
               <span className='Label'>Date</span>
               <span>Tuesday, April 7th 2026 at 8:00 AM MDT (GMT-0600)</span>
             </div>
-            <div className='Info-item'>
+            {/* <div className='Info-item'>
               <span className='Label'>Location</span>
               <span>Hackery (ATLS 208) or <a href="
 https://cuboulder.zoom.us/j/97506727714" target="_blank" rel="noopener noreferrer">Zoom (
 https://cuboulder.zoom.us/j/97506727714)</a></span>
-            </div>
+            </div> */}
             <div className='Info-item'>
               <span className='Label'>Committee</span>
               <span>Ellen Yi-Luen Do (Chair), Michael L. Rivera, Ricarose Roque, Ann Eisenberg, Amos Blanton, Clement Zheng</span>
