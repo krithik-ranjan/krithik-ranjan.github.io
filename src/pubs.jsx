@@ -9,6 +9,7 @@ import Nav from './components/Nav'
 
 import BeholderGame from './assets/research/beholdergame.png';
 import RigADoodle from './assets/research/rigadoodle.png';
+import WNR from './assets/research/wnr.png';
 import DesignSpace from './assets/research/designspace.png';
 import Cartoonimator from './assets/research/cartoonimator.png';
 import Beholder from './assets/research/beholder.png';
@@ -48,7 +49,7 @@ function Publications() {
         </div>
         <div className="Paper">
           <div className="Paper-image">
-            <img src={DesignSpace}  alt="Design Space" />
+            <img src={WNR}  alt="WNR" />
           </div>
           <div className="Paper-info">
             <h5>Why (Not) ReacTIVision: Challenges and Opportunities for Building Tangible User Interfaces with Computer Vision Toolkits</h5>
@@ -82,8 +83,8 @@ function Publications() {
           </div>
           <div className="Paper-info">
             <h5>Cartoonimator: A Paper-based Tangible Kit for Keyframe Animation</h5>
-            <p>Krithik Ranjan, Peter Gyory, Seneca Howell, Therese Stewart, Michael L. Rivera, and Ellen Yi-Luen Do. 2025. In Tangible, Embedded, and Embodied Interaction (TEI ’25).</p>
-            <p>Krithik Ranjan, Peter Gyory, Michael L Rivera, and Ellen Yi-Luen Do. 2023. In Interaction Design and Children (IDC '23).</p>
+            <p>Krithik Ranjan, Peter Gyory, Seneca Howell, Therese Stewart, Michael L. Rivera, and Ellen Yi-Luen Do. 2025. In ACM Tangible, Embedded, and Embodied Interaction (TEI ’25).</p>
+            <p>Krithik Ranjan, Peter Gyory, Michael L Rivera, and Ellen Yi-Luen Do. 2023. In ACM Interaction Design and Children (IDC '23).</p>
             <a className='A-Green' href={Cartoonimator_paper}>PDF</a>&emsp;/&emsp;<a className='A-Green' href="https://doi.org/10.1145/3689050.3704955">DOI</a>&emsp;/&emsp;<a className='A-Green' href={Cartoonimator_poster}>POSTER</a>&emsp;/&emsp;<a className='A-Green' href="https://krithik-ranjan.github.io/cartoonimator/">WEBSITE</a>&emsp;/&emsp;
           </div>
         </div>
@@ -93,7 +94,7 @@ function Publications() {
           </div>
           <div className="Paper-info">
             <h5>Physical Computing with Paper Playground: Exploring a Multimodal Platform</h5>
-            <p>Krithik Ranjan, Ann Eisenberg, Brett L. Fiedler, Jesse Eisenberg, Taliesin L. Smith, Emily B. Moore. 2025. In Tangible, Embedded, and Embodied Interaction (TEI ’25).</p>
+            <p>Krithik Ranjan, Ann Eisenberg, Brett L. Fiedler, Jesse Eisenberg, Taliesin L. Smith, Emily B. Moore. 2025. In ACM Tangible, Embedded, and Embodied Interaction (TEI '25).</p>
             <a className='A-Green' href={Playground_paper}>PDF</a>&emsp;/&emsp;<a className='A-Green' href="https://doi.org/10.1145/3689050.3705981">DOI</a>&emsp;/&emsp;<a className='A-Green' href="https://youtu.be/aG84SCipiZs">VIDEO</a>&emsp;/&emsp;
           </div>
         </div>
@@ -113,7 +114,7 @@ function Publications() {
           </div>
           <div className="Paper-info">
             <h5>Directing Tangible Controllers with Computer Vision and Beholder</h5>
-            <p>Peter Gyory, Krithik Ranjan, Zhen Zhou Yong, Clement Zheng, Ellen Yi-Luen Do. 2022. In SIGGRAPH Asia Emerging Technologies '22.</p>
+            <p>Peter Gyory, Krithik Ranjan, Zhen Zhou Yong, Clement Zheng, Ellen Yi-Luen Do. 2022. In ACM SIGGRAPH Asia Emerging Technologies '22.</p>
             <a className='A-Green' href={Beholder_paper}>PDF</a>&emsp;/&emsp;<a className='A-Green' href="https://doi.org/10.1145/3550471.3564764">DOI</a>&emsp;/&emsp;
           </div>
         </div>
@@ -133,7 +134,7 @@ function Publications() {
           </div>
           <div className="Paper-info">
             <h5>SkinKit: Construction Kit for On-Skin Interface Prototyping</h5>
-            <p>Pin-Sung Ku, Md. Tahmidul Islam Molla, Kunpeng Huang*, Priya Kattappurath*, Krithik Ranjan, Cindy Hsin-Liu Kao. 2021. In Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT '21).</p>
+            <p>Pin-Sung Ku, Md. Tahmidul Islam Molla, Kunpeng Huang*, Priya Kattappurath*, Krithik Ranjan, Cindy Hsin-Liu Kao. 2021. In ACM Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT '21).</p>
             <a className='A-Green' href="https://doi.org/10.1145/3494989">DOI</a>&emsp;/&emsp;
           </div>
         </div>
