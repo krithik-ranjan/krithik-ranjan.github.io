@@ -7,6 +7,8 @@ import Head from './components/Head'
 import Foot from './components/Foot'
 import Nav from './components/Nav'
 
+import BeholderGame from './assets/research/beholdergame.png';
+import RigADoodle from './assets/research/rigadoodle.png';
 import DesignSpace from './assets/research/designspace.png';
 import Cartoonimator from './assets/research/cartoonimator.png';
 import Beholder from './assets/research/beholder.png';
@@ -15,6 +17,9 @@ import Skinkit from './assets/research/skinkit.jpg';
 import Playground from './assets/research/playground.jpg';
 import Dualstream from './assets/research/dualstream.png';
 
+import BeholderGame_paper from './assets/papers/beholdergame_paper_cc26.pdf';
+import WNR_paper from './assets/papers/wnr_paper_tei26.pdf';
+import RigADoodle_paper from './assets/papers/rigadoodle_paper_tei26.pdf';
 import DesignSpace_paper from './assets/papers/designspace_paper_constr25.pdf';
 import Cartoonimator_paper from './assets/papers/cartoonimator_paper_tei25.pdf';
 import Cartoonimator_poster from './assets/papers/cartoonimator_poster_idc23.pdf';
@@ -33,6 +38,36 @@ function Publications() {
       <div className="Content">
         <div className="Paper">
           <div className="Paper-image">
+            <img src={BeholderGame}  alt="Beholder Game" />
+          </div>
+          <div className="Paper-info">
+            <h5>Make Your Own Game Controller! Engaging Youth with Computer Vision-driven Physical Computing</h5>
+            <p>Krithik Ranjan, Peter Gyory, Ellen Yi-Luen Do, Clement Zheng. 2026. In ACM Creativity & Cognition (C&C '26).</p>
+            <a className='A-Green' href="https://doi.org/10.1145/3803784.3809286">DOI</a>&emsp;/&emsp;<a className='A-Green' href={BeholderGame_paper}>PDF</a>&emsp;/&emsp;
+          </div>
+        </div>
+        <div className="Paper">
+          <div className="Paper-image">
+            <img src={DesignSpace}  alt="Design Space" />
+          </div>
+          <div className="Paper-info">
+            <h5>Why (Not) ReacTIVision: Challenges and Opportunities for Building Tangible User Interfaces with Computer Vision Toolkits</h5>
+            <p>Krithik Ranjan, S. Sandra Bae, Peter Gyory, Ellen Yi-Luen Do, Clement Zheng, Rong-Hao Liang. 2026. In ACM Tangible, Embedded, and Embodied Interaction (TEI '26).</p>
+            <a className='A-Green' href="https://doi.org/10.1145/3731459.3773326">DOI</a>&emsp;/&emsp;<a className='A-Green' href={WNR_paper}>PDF</a>&emsp;/&emsp;
+          </div>
+        </div>
+        <div className="Paper">
+          <div className="Paper-image">
+            <img src={RigADoodle}  alt="Rig-a-Doodle" />
+          </div>
+          <div className="Paper-info">
+            <h5>Rig-a-Doodle: Tangible Kit for Dynamic Hand-drawn Character Animation</h5>
+            <p>Krithik Ranjan, Khushi Kshirsagar, Harrison Jesse Smith, Ellen Yi-Luen Do. 2026. In ACM Tangible, Embedded, and Embodied Interaction (TEI '26).</p>
+            <a className='A-Green' href="https://doi.org/10.1145/3731459.3779320">DOI</a>&emsp;/&emsp;<a className='A-Green' href={RigADoodle_paper}>PDF</a>&emsp;/&emsp;
+          </div>
+        </div>
+        <div className="Paper">
+          <div className="Paper-image">
             <img src={DesignSpace}  alt="Design Space" />
           </div>
           <div className="Paper-info">
@@ -48,7 +83,7 @@ function Publications() {
           <div className="Paper-info">
             <h5>Cartoonimator: A Paper-based Tangible Kit for Keyframe Animation</h5>
             <p>Krithik Ranjan, Peter Gyory, Seneca Howell, Therese Stewart, Michael L. Rivera, and Ellen Yi-Luen Do. 2025. In Tangible, Embedded, and Embodied Interaction (TEI ’25).</p>
-            <p>Krithik Ranjan, Peter Gyory, Michael L Rivera, and Ellen Yi-Luen Do. 2023. In Interaction Design and Children (IDC ’23).</p>
+            <p>Krithik Ranjan, Peter Gyory, Michael L Rivera, and Ellen Yi-Luen Do. 2023. In Interaction Design and Children (IDC '23).</p>
             <a className='A-Green' href={Cartoonimator_paper}>PDF</a>&emsp;/&emsp;<a className='A-Green' href="https://doi.org/10.1145/3689050.3704955">DOI</a>&emsp;/&emsp;<a className='A-Green' href={Cartoonimator_poster}>POSTER</a>&emsp;/&emsp;<a className='A-Green' href="https://krithik-ranjan.github.io/cartoonimator/">WEBSITE</a>&emsp;/&emsp;
           </div>
         </div>

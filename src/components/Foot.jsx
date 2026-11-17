@@ -1,4 +1,4 @@
-import CV from '../assets/CV_KrithikRanjan.pdf';
+import CV from '../assets/KrithikRanjan_CV.pdf';
 
 import red from '../assets/shape-red.svg'
 import green from '../assets/shape-green.svg'

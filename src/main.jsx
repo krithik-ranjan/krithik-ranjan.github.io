@@ -59,11 +59,6 @@ function Home() {
         <p>I received my B.Sc. in Electrical and Computer Engineering from Cornell University in May 2022, where I worked with <a className='A-Purple' href="https://www.hybridbody.human.cornell.edu/">Prof. Cindy Hsin-Liu Kao</a>, <a className='A-Purple' href="https://mdtl.human.cornell.edu/">Prof. Jay Yoon</a>, and <a className='A-Purple'href="https://www.csl.cornell.edu/~cbatten/">Prof. Christopher Batten</a>.</p>
       </div>
 
-      
-
-
-      
-
       <Foot />
     </div>
   )
